@@ -1,0 +1,49 @@
+﻿@page
+@model GrosuGeorgeDBCrudFarmacie.Pages.WWWProduse.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Produse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Produse.produsNume)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produse.produsNume)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produse.produsProd)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produse.produsProd)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produse.produsExp)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produse.produsExp)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produse.Farmacie)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produse.Farmacie.farmacieAdr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Produse.Oras)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Produse.Oras.orasDen)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Produse.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
